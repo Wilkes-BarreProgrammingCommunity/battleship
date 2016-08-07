@@ -132,7 +132,7 @@ class Battlegrid:
                 elif x == 99:
                     templine.append("M" + " ")
                 elif x == 0:
-                    templine.append(" " + " ")
+                    templine.append("." + " ")
                 else:
                     templine.append(str(x) + " ")
             print("".join(templine) + "|")
@@ -215,6 +215,7 @@ class PersonBattlegrid(Battlegrid):
                       "You have won this battle, but who will win the war?",
                       "Know thy enemy and know thyself and there is no danger in battle."]
         print(posmessage[random.randint(0, len(posmessage)-1)])
+        dummy = input("press enter to stop.")
 
 class AIBattleGrid(Battlegrid):
     """
@@ -354,6 +355,7 @@ class AIBattleGrid(Battlegrid):
                       "I win again.  Do you acknowledge my superiority?",
                       "When Alexander saw the breadth of his domain, he wept, for there were no more worlds to conquer."]
         print(posmessage[random.randint(0, len(posmessage)-1)])
+        dummy = input("Press enter to stop.")
 
 def gameloop(me, you):
     """
